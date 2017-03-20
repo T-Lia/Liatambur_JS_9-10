@@ -1,0 +1,23 @@
+body {
+    background: url("../img/background.jpg") no-repeat;
+}
+
+.main-wrapper {
+    width: 600px;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    margin: 15px auto;
+}
+
+.header-text {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.select-wrapper {
+    margin: 15px auto;
+}
