@@ -13,11 +13,149 @@ body {
 }
 
 .header-text {
+    font-family: Arial;
     font-size: 42px;
     font-weight: bold;
     text-align: center;
 }
 
+/*-------Menu-------------------*/
+
+nav {
+    width: 617px;
+    /*height: 30px;*/
+    background-color: peru;
+
+}
+
+.menu_item {
+    display: inline-block;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.submenu {
+    top: 100px;
+    left: -200px;
+    background-color: #d2ad63;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    opacity: 0;
+    transition-duration: 2s;
+    transition-property: top,left,opacity;
+}
+
+.submenu_item {
+    padding: 10px 25px;
+}
+
+.menu_item:hover .submenu {
+    top: 35px;
+    left: 0;
+    opacity: 1;
+}
+
+.menu_item:hover .menu_link {
+    color: #87683d;
+}
+
+.menu_item:hover {
+    background-color: #d2ad63;
+}
+
+.menu_link, .submenu_link {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.submenu_link {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*---------Select---------------*/
+
 .select-wrapper {
-    margin: 15px auto;
+    margin: 0 250px;
+}
+
+/*-------jQuery checkbox-------*/
+.checkbox_container {
+    display: inline-block;
+    width: 500px;
+}
+
+.jQ_checkbox-wrapper {
+    display: inline-block;
+    width: 300px;
+    margin-top: 100px;
+    clear: both;
+}
+
+.niceCheck {
+    height: 17px;
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    cursor: pointer;
+    background: url("../img/checkbox-sprite.png") 0 0 no-repeat;
+    font-family: Arial;
+    font-size: 16px;
+    color: #444;
+}
+
+.niceCheck input {
+    display: none;
+}
+
+.active {
+    background-position: 0 -17px;
+}
+
+/*--------css checkbox----------*/
+
+.css_checkbox-wrapper {
+    display: inline-block;
+    width: 195px;
+}
+
+.box {
+    margin-bottom: 5px;
+}
+
+.css_check {
+    margin-left: -15px;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 16px;
+    color: #444;
+}
+
+.css_check:before {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 3px;
+    left: -8px;
+    background: url("../img/checkbox-sprite.png");
+}
+
+input[type=checkbox]:checked + .css_check:before {
+    background-position: 0 -17px;
+}
+
+.css_check:hover:before {
+    background-position: 0 -34px;
+}
+
+input[type=checkbox]:checked + .css_check:hover:before {
+    background-position: 0 -51px;
 }

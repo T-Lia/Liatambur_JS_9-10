@@ -41,3 +41,11 @@ $ (function () {
     $ ('#default-usage-select').selectbox();
 });
 
+// ====================jQuery checkbox====================
+
+$ (function () {
+    var $check = $('.niceCheck');
+    $check.on('mousedown', function () {
+        $(this).toggleClass('active');
+    })
+});
