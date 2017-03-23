@@ -1,6 +1,3 @@
-/**
- * Created by TGoro on 20.03.2017.
- */
 $(function(){
     $('.niceCheck').mousedown(function() {  /* при клике на чекбоксе меняем его вид и значение */
         changeCheck($(this));
@@ -12,12 +9,11 @@ $(function(){
 });
 
 /* функция смены вида и значения чекбокса
- el - span контейнер дял обычного чекбокса
+ el - span контейнер для обычного чекбокса
  input - чекбокс */
 
 function changeCheck(el) {
-     var el = el,
-         input = el.find('input').eq(0);
+    var input = el.find('input').eq(0);
 
     if(!input.attr('checked')) {
         el.css('background-position','0 -17px');
@@ -33,9 +29,7 @@ function changeCheck(el) {
 /* если установлен атрибут checked, меняем вид чекбокса */
 
 function changeCheckStart(el) {
-
-    var el = el,
-        input = el.find('input').eq(0);
+    var input = el.find('input').eq(0);
 
     if(input.attr('checked')) {
         el.css('background-position','0 -17px');
